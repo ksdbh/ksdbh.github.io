@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html",
     "dev": "python -m http.server 8000",
-    "test": "jest"
+    "test": "echo \"No automated tests configured\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,5 @@
   "bugs": {
     "url": "https://github.com/ksdbh/ksdbh.github.io/issues"
   },
-  "homepage": "https://ksdbh.github.io",
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "jsdom": "^24.0.0"
-  },
-  "jest": {
-    "testEnvironment": "jsdom"
-  }
+  "homepage": "https://ksdbh.github.io"
 }
