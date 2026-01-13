@@ -4,7 +4,7 @@
   "description": "Sean Hayes personal portfolio site",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html && cp Sean_Hayes_Resume.pdf dist/Sean_Hayes_Resume.pdf",
     "dev": "python -m http.server 8000",
     "test": "echo \"No automated tests configured\" && exit 0"
   },
