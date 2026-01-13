@@ -1,0 +1,26 @@
+{
+  "name": "ksdbh.github.io",
+  "version": "1.0.0",
+  "description": "Sean Hayes personal portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html",
+    "dev": "python -m http.server 8000",
+    "test": "echo \"No automated tests configured\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksdbh/ksdbh.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site"
+  ],
+  "author": "Sean Hayes",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ksdbh/ksdbh.github.io/issues"
+  },
+  "homepage": "https://ksdbh.github.io"
+}
