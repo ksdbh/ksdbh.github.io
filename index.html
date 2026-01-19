@@ -786,7 +786,7 @@
           <a href="#about" data-nav="about">About</a>
           <a href="#projects" data-nav="projects">Projects</a>
           <a href="#experience" data-nav="experience">Experience</a>
-          <a href="#writing" data-nav="writing">Writing</a>
+          <a href="#writing" data-nav="writing">Blog</a>
           <a href="#contact" data-nav="contact">Contact</a>
         </nav>
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
@@ -889,7 +889,7 @@
         <p class="section-kicker">Three case studies that show how I think about systems.</p>
       </div>
       <div class="section-grid">
-        <article class="project-card" tabindex="0">
+        <article class="project-card" tabindex="0" data-url="https://github.com/ksdbh/jobfit-engine">
           <div class="project-meta">
             <div class="project-name">JobFit Engine</div>
             <div class="project-pill">full-stack · infra · ci/cd</div>
@@ -911,7 +911,7 @@
           </div>
         </article>
 
-        <article class="project-card" tabindex="0">
+        <article class="project-card" tabindex="0" data-url="https://github.com/ksdbh/RAGEdu-starter">
           <div class="project-meta">
             <div class="project-name">RAGEdu</div>
             <div class="project-pill">rag · observability</div>
@@ -985,27 +985,50 @@
 
     <section id="writing" class="section" aria-labelledby="writing-heading">
       <div class="section-header">
-        <h2 id="writing-heading" class="section-title">Writing</h2>
-        <p class="section-kicker">A couple of posts that show how I think.</p>
+        <h2 id="writing-heading" class="section-title">Blog</h2>
+        <p class="section-kicker">Project write-ups focused on how things are built and why.</p>
       </div>
       <div class="writing-grid">
         <article class="post-card">
-          <div class="post-title">Idempotency patterns in event-driven AWS</div>
-          <div class="post-meta">Event design · SQS · DynamoDB</div>
+          <div class="post-title">JobFit Engine: explainable scores for messy job boards</div>
+          <div class="post-meta">JobFit Engine · Next.js 14 · FastAPI · Postgres · Prisma</div>
           <p class="post-body">
-            Notes from building pipelines that never double‑charge or re‑send the same notification, even when
-            everything retries at once.
+            JobFit Engine started as a frustration with opaque "match scores" on job boards. I wanted a flow where a
+            candidate can see why they ranked where they did: which skills matched, which didnt, and what would move the
+            score.
           </p>
-          <span>Read the patterns — coming soon</span>
+          <p class="post-body">
+            The project is a small monorepo: a Next.js 14 app-router frontend that handles auth, dashboards, and
+            persistence via Prisma, and a FastAPI worker that does the heavy lifting on PDFs and job descriptions. The
+            web app talks to Postgres for users, resumes, jobs, and scores; the API stays stateless and focuses on
+            parsing and normalization.
+          </p>
+          <p class="post-body">
+            In the longer write-up I break down the main request flows (uploading resumes, ingesting jobs from URLs and
+            ATS connectors, recomputing scores, and building an "apply kit"), plus some notes on keeping the scoring
+            logic explainable instead of opaque.
+          </p>
+          <span><a href="https://github.com/ksdbh/jobfit-engine" target="_blank" rel="noopener">View the project on GitHub a</a></span>
         </article>
         <article class="post-card">
-          <div class="post-title">How I debug distributed systems quickly</div>
-          <div class="post-meta">Tracing · logs · mental models</div>
+          <div class="post-title">RAGEdu: teaching RAG with real traces, not magic</div>
+          <div class="post-meta">RAGEdu · FastAPI · vector search · OpenTelemetry</div>
           <p class="post-body">
-            A walkthrough of the questions I ask when latency spikes: what changed, where the time went, and how to
-            make the next incident easier.
+            RAGEdu is a teaching tool for Retrieval-Augmented Generation. Instead of a black-box chatbot, every
+            question runs through a set of small services that show you where context came from, how it was scored, and
+            how the final answer was assembled.
           </p>
-          <span>View the playbook — coming soon</span>
+          <p class="post-body">
+            The core is a FastAPI backend wired to a vector store and observability stack. For a single query you can
+            see which documents were retrieved, what their similarity scores looked like, where time was spent, and what
+            would have fired in a real production incident (alerts, logs, and traces).
+          </p>
+          <p class="post-body">
+            Future posts will dive into how I structure the retrieval pipeline, how I surface ranking signals in the UI,
+            and how tracing (via OpenTelemetry) plus dashboards (Grafana/Loki) turn "why did it answer that?" into
+            something you can systematically debug.
+          </p>
+          <span><a href="https://github.com/ksdbh/RAGEdu-starter" target="_blank" rel="noopener">View the project on GitHub a</a></span>
         </article>
       </div>
     </section>
@@ -1077,6 +1100,29 @@
     );
 
     sections.forEach((section) => observer.observe(section));
+
+    const projectCards = document.querySelectorAll('.project-card[data-url]');
+    projectCards.forEach((card) => {
+      const url = card.getAttribute('data-url');
+      if (!url) return;
+
+      card.setAttribute('role', 'link');
+
+      card.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target instanceof Element && target.closest('a')) {
+          return;
+        }
+        window.open(url, '_blank', 'noopener');
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.open(url, '_blank', 'noopener');
+        }
+      });
+    });
   </script>
 </body>
 </html>
