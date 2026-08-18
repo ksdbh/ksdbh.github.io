@@ -39,7 +39,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "latest",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "latest",
     "@types/node": "^20.19.43",
     "@types/react": "latest",
