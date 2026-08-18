@@ -13,8 +13,8 @@ describe('AboutPage', () => {
 
     expect(screen.getByText(/I’m a Full Stack Engineer/i)).toBeInTheDocument();
     expect(screen.getByText(/Charlotte, North Carolina/i)).toBeInTheDocument();
-    expect(screen.getByText(/I’m a dad to a wonderful daughter/i)).toBeInTheDocument();
-    expect(screen.getByText(/paragliding, rock climbing, and hiking/i)).toBeInTheDocument();
+    expect(screen.getByText(/I am a dad to a wonderful daughter/i)).toBeInTheDocument();
+    expect(screen.getByText(/paragliding, rock climbing and hiking/i)).toBeInTheDocument();
     expect(screen.queryByText(/will connect|remaining chronology/i)).not.toBeInTheDocument();
   });
 

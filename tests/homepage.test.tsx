@@ -87,8 +87,8 @@ describe('HomePage', () => {
   it('shares concise personal context without identifying family details', () => {
     renderHomepage();
 
-    expect(screen.getByText(/I’m a dad to a wonderful daughter/i)).toBeInTheDocument();
-    expect(screen.getByText(/paragliding, rock climbing, and hiking/i)).toBeInTheDocument();
+    expect(screen.getByText(/I am a dad to a wonderful daughter/i)).toBeInTheDocument();
+    expect(screen.getByText(/paragliding, rock climbing and hiking/i)).toBeInTheDocument();
   });
 
   it('has no automated structural accessibility violations', async () => {

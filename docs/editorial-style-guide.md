@@ -324,12 +324,8 @@ The approved About-page direction is:
 
 > I'm a backend and cloud engineer who enjoys understanding how complex systems behave.
 >
-> I'm a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
-> and hiking.
->
-> Family comes first, and many of the qualities I value most—preparation, continuous
-> learning, and good judgment under changing conditions—carry naturally into the way I
-> approach engineering.
+> I am a dad to a wonderful daughter. During my off time from work my hobbies include
+> paragliding, rock climbing and hiking.
 
 ## Animation and visual explanations
 

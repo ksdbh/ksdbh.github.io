@@ -204,9 +204,8 @@ export default function HomePage() {
         </div>
         <div>
           <p>
-            I’m a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
-            and hiking. Family is central; preparation, continuous learning, and good judgment
-            matter in both work and life.
+            I am a dad to a wonderful daughter. During my off time from work my hobbies include
+            paragliding, rock climbing and hiking.
           </p>
           <Link className={styles.textLink} href="/about/">
             More about me <span aria-hidden="true">↗</span>
