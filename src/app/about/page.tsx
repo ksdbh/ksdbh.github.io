@@ -28,9 +28,9 @@ export default function AboutPage() {
       <section className="content-stack" aria-labelledby="outside-engineering">
         <h2 id="outside-engineering">Outside engineering</h2>
         <p>
-          I’m a father, paraglider, rock climber, and generally happiest somewhere outside. Family
-          comes first, and I value preparation, continuous learning, and good judgment when
-          conditions change.
+          I’m a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
+          and hiking. Family comes first, and I value preparation, continuous learning, and good
+          judgment when conditions change.
         </p>
       </section>
     </>

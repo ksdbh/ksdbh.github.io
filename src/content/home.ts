@@ -37,6 +37,10 @@ export interface HomepageProjectPreview {
   contribution: Fact<string>;
   decision: Fact<string>;
   technologies: readonly string[];
+  liveDemo?: {
+    label: string;
+    url: string;
+  };
 }
 
 export interface HomepageCapability {
@@ -127,6 +131,10 @@ export const homepageContent = {
         [portfolioReview, resonanceRepository],
       ),
       technologies: ['TypeScript', 'SVG + Canvas', 'Web Audio', 'WebGL'],
+      liveDemo: {
+        label: 'Open live lab',
+        url: 'https://resonance-foundry.vercel.app',
+      },
     },
   ] satisfies HomepageProjectPreview[],
   capabilities: [

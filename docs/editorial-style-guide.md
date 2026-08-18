@@ -309,10 +309,10 @@ exists, how it behaves under pressure, and how to explain it clearly after learn
 ## Personal writing
 
 Personal information should make the portfolio warmer without dominating it. Sean is a
-father, is family-oriented, paraglides, climbs, and is generally happiest outdoors.
+dad to a daughter, is family-oriented, and enjoys paragliding, rock climbing, and hiking.
 
-Keep this material concise and sincere. Do not expose names, ages, custody information,
-legal matters, schedules, precise locations, or other private family details.
+Keep this material concise and sincere. Do not expose names, ages, schedules, precise
+locations, or other private family details.
 
 Avoid forced metaphors:
 
@@ -324,8 +324,8 @@ The approved About-page direction is:
 
 > I'm a backend and cloud engineer who enjoys understanding how complex systems behave.
 >
-> Away from software, I'm a father, paraglider, rock climber, and generally happiest
-> somewhere outside.
+> I'm a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
+> and hiking.
 >
 > Family comes first, and many of the qualities I value most—preparation, continuous
 > learning, and good judgment under changing conditions—carry naturally into the way I

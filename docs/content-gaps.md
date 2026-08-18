@@ -150,9 +150,9 @@ engineering through experimentation—not simply to make visual effects.
 
 ## Personal biography
 
-Resolved direction: keep the personal layer short; identify Sean only as a father,
-paraglider, rock climber, and outdoors-oriented person; disclose no custody, legal, or
-family-member details; use no forced mountain/software metaphor.
+Resolved direction: keep the personal layer short; identify Sean as a dad to a daughter
+who enjoys paragliding, rock climbing, and hiking. Disclose no names, ages, schedules,
+or other identifying family details; use no forced mountain/software metaphor.
 
 1. **P1:** Does Sean want personal photography, abstract outdoor imagery, or text only on the About page?
 2. **P1:** How long has Sean paraglider-flown and climbed, without naming locations or details he would rather keep private?

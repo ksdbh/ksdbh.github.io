@@ -130,9 +130,23 @@ export default function HomePage() {
                     <li key={technology}>{technology}</li>
                   ))}
                 </ul>
-                <Link className={styles.textLink} href={`/work/${project.slug}/`}>
-                  Read case study <span aria-hidden="true">↗</span>
-                </Link>
+                <div className={styles.projectActions}>
+                  <Link className={styles.textLink} href={`/work/${project.slug}/`}>
+                    Read case study <span aria-hidden="true">↗</span>
+                  </Link>
+                  {project.liveDemo ? (
+                    <a
+                      className={styles.liveLink}
+                      href={project.liveDemo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title}: ${project.liveDemo.label} (opens in a new tab)`}
+                    >
+                      {project.liveDemo.label}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </article>
           ))}
@@ -190,9 +204,9 @@ export default function HomePage() {
         </div>
         <div>
           <p>
-            I’m a father, paraglider, rock climber, and generally happiest somewhere outside. Family
-            is central; preparation, continuous learning, and good judgment matter in both work and
-            life.
+            I’m a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
+            and hiking. Family is central; preparation, continuous learning, and good judgment
+            matter in both work and life.
           </p>
           <Link className={styles.textLink} href="/about/">
             More about me <span aria-hidden="true">↗</span>

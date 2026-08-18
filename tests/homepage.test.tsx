@@ -44,6 +44,23 @@ describe('HomePage', () => {
     expect(within(selectedWork).getAllByRole('link', { name: /Read case study/i })).toHaveLength(3);
   });
 
+  it('offers the implemented Resonance Foundry laboratory as an accessible live demo', () => {
+    renderHomepage();
+
+    const resonanceHeading = screen.getByRole('heading', { name: 'Resonance Foundry' });
+    const resonanceStory = resonanceHeading.closest('article');
+
+    expect(resonanceStory).not.toBeNull();
+    const liveDemo = within(resonanceStory!).getByRole('link', {
+      name: 'Resonance Foundry: Open live lab (opens in a new tab)',
+    });
+
+    expect(liveDemo).toHaveAttribute('href', 'https://resonance-foundry.vercel.app');
+    expect(liveDemo).toHaveAttribute('target', '_blank');
+    expect(liveDemo).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(screen.getAllByRole('link', { name: /Open live lab/i })).toHaveLength(1);
+  });
+
   it('connects capabilities to evidence and provides a stepwise mobile flow', () => {
     renderHomepage();
 
@@ -65,6 +82,13 @@ describe('HomePage', () => {
     expect(screen.queryByText(/millions? of events/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/built a local Python snapshot engine/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/content-addressed storage/i)).not.toBeInTheDocument();
+  });
+
+  it('shares concise personal context without identifying family details', () => {
+    renderHomepage();
+
+    expect(screen.getByText(/I’m a dad to a wonderful daughter/i)).toBeInTheDocument();
+    expect(screen.getByText(/paragliding, rock climbing, and hiking/i)).toBeInTheDocument();
   });
 
   it('has no automated structural accessibility violations', async () => {

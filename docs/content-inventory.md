@@ -57,23 +57,23 @@ not strengthen one of them should be reconsidered.
 
 ## Known profile facts
 
-| Fact                                                           | Current evidence                                | Publication status                              |
-| -------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| Name: Sean Hayes                                               | Owner-supplied brief; existing portfolio        | Safe                                            |
-| Primary positioning: Backend • Platform • Cloud Engineer       | Owner confirmation                              | Safe                                            |
-| Location: Charlotte, North Carolina                            | Owner confirmation                              | Safe                                            |
-| Work preference: remote or hybrid                              | Owner confirmation                              | Safe                                            |
-| Relocation may be considered for the right opportunity         | Owner confirmation                              | Do not advertise broadly; discuss when relevant |
-| Current role: Full Stack Engineer (contract)                   | Owner confirmation                              | Safe after employer/date context is confirmed   |
-| Professional experience: 4+ years                              | Owner confirmation                              | Safe                                            |
-| Professional experience reaches five years in April 2027       | Owner confirmation                              | Use a maintainable date-based representation    |
-| Seeking long-term backend/platform/cloud opportunities         | Owner confirmation                              | Safe; do not label “Available” while employed   |
-| Father and deeply family-oriented                              | Owner-supplied brief                            | Safe at a high level; private details excluded  |
-| Interests include paragliding, rock climbing, and the outdoors | Owner-supplied brief                            | Safe at a high level                            |
-| GitHub account: `ksdbh`                                        | Existing portfolio and local repository remotes | Safe, subject to final link check               |
-| LinkedIn profile exists                                        | Existing portfolio                              | Safe, subject to owner confirmation             |
-| Preferred public email is the address in the old portfolio     | Owner confirmation                              | Safe                                            |
-| Only the newest résumé should be published                     | Owner confirmation                              | `public/Sean_Hayes_Resume.pdf` is authoritative |
+| Fact                                                       | Current evidence                                | Publication status                                |
+| ---------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------- |
+| Name: Sean Hayes                                           | Owner-supplied brief; existing portfolio        | Safe                                              |
+| Primary positioning: Backend • Platform • Cloud Engineer   | Owner confirmation                              | Safe                                              |
+| Location: Charlotte, North Carolina                        | Owner confirmation                              | Safe                                              |
+| Work preference: remote or hybrid                          | Owner confirmation                              | Safe                                              |
+| Relocation may be considered for the right opportunity     | Owner confirmation                              | Do not advertise broadly; discuss when relevant   |
+| Current role: Full Stack Engineer (contract)               | Owner confirmation                              | Safe after employer/date context is confirmed     |
+| Professional experience: 4+ years                          | Owner confirmation                              | Safe                                              |
+| Professional experience reaches five years in April 2027   | Owner confirmation                              | Use a maintainable date-based representation      |
+| Seeking long-term backend/platform/cloud opportunities     | Owner confirmation                              | Safe; do not label “Available” while employed     |
+| Dad to a daughter and deeply family-oriented               | Owner confirmation                              | Safe at this generality; private details excluded |
+| Interests include paragliding, rock climbing, and hiking   | Owner confirmation                              | Safe                                              |
+| GitHub account: `ksdbh`                                    | Existing portfolio and local repository remotes | Safe, subject to final link check                 |
+| LinkedIn profile exists                                    | Existing portfolio                              | Safe, subject to owner confirmation               |
+| Preferred public email is the address in the old portfolio | Owner confirmation                              | Safe                                              |
+| Only the newest résumé should be published                 | Owner confirmation                              | `public/Sean_Hayes_Resume.pdf` is authoritative   |
 
 ## Flagship-project evaluation
 
@@ -282,8 +282,8 @@ direction is:
 
 > I'm a backend and cloud engineer who enjoys understanding how complex systems behave.
 >
-> Away from software, I'm a father, paraglider, rock climber, and generally happiest
-> somewhere outside.
+> I'm a dad to a wonderful daughter. Outside of work, I enjoy paragliding, rock climbing,
+> and hiking.
 >
 > Family comes first, and many of the qualities I value most—preparation, continuous
 > learning, and good judgment under changing conditions—carry naturally into the way I
