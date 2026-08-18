@@ -1,12 +1,20 @@
 {
-  "name": "ksdbh.github.io",
-  "version": "1.0.0",
-  "description": "Sean Hayes personal portfolio site",
-  "main": "index.js",
+  "name": "sean-hayes-portfolio",
+  "version": "0.1.0",
+  "description": "Sean Hayes engineering portfolio",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html && cp Sean_Hayes_Resume.pdf dist/Sean_Hayes_Resume.pdf",
-    "dev": "python -m http.server 8000",
-    "test": "echo \"No automated tests configured\" && exit 0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -14,13 +22,37 @@
   },
   "keywords": [
     "portfolio",
-    "static-site"
+    "software-engineering",
+    "backend",
+    "platform",
+    "cloud"
   ],
   "author": "Sean Hayes",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/ksdbh/ksdbh.github.io/issues"
   },
-  "homepage": "https://ksdbh.github.io"
+  "homepage": "https://ksdbh.github.io",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@types/node": "^20.19.43",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "axe-core": "^4.13.0",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "jsdom": "^26.1.0",
+    "prettier": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
 }

@@ -1,4 +1,8 @@
 node_modules
 /dist
+/out
+/.next
+/coverage
+*.tsbuildinfo
 npm-debug.log*
 .DS_Store
