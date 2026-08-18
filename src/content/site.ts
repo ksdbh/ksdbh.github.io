@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Sean Hayes',
-  currentTitle: 'Full Stack Engineer (contract)',
+  currentTitle: 'Full Stack Engineer',
   positioning: 'Backend • Platform • Cloud Engineer',
   description:
     'Engineering portfolio for Sean Hayes, focused on backend systems, cloud platforms, and technical decision-making.',
@@ -13,6 +13,5 @@ export const siteConfig = {
 export const primaryNavigation = [
   { href: '/', label: 'Home' },
   { href: '/work/', label: 'Work' },
-  { href: '/lab/', label: 'Lab' },
   { href: '/about/', label: 'About' },
 ] as const;

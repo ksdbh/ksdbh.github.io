@@ -1,7 +1,7 @@
 # Portfolio content inventory
 
-Status: Phase 0 draft. No claim in this document is approved for publication merely
-because it appears here.
+Status: Phase 3 editorial review. No claim in this document is approved for publication
+merely because it appears here.
 
 ## Positioning currently supported
 
@@ -73,7 +73,7 @@ not strengthen one of them should be reconsidered.
 | GitHub account: `ksdbh`                                        | Existing portfolio and local repository remotes | Safe, subject to final link check               |
 | LinkedIn profile exists                                        | Existing portfolio                              | Safe, subject to owner confirmation             |
 | Preferred public email is the address in the old portfolio     | Owner confirmation                              | Safe                                            |
-| Only the newest résumé should be published                     | Owner confirmation                              | Authoritative file still needs identification   |
+| Only the newest résumé should be published                     | Owner confirmation                              | `public/Sean_Hayes_Resume.pdf` is authoritative |
 
 ## Flagship-project evaluation
 
@@ -81,7 +81,7 @@ not strengthen one of them should be reconsidered.
 
 This is the strongest lead story because it aligns most directly with the target roles
 and can demonstrate engineering under real operational constraints. It should remain a
-sanitized pattern-based case study rather than a diagram of an employer's actual system.
+generalized pattern-based case study rather than a diagram of an employer's actual system.
 
 The compelling center is not a list of Kafka, Lambda, Terraform, and secrets tools. It
 is the decision chain around asynchronous processing, delivery semantics, idempotency,
@@ -89,33 +89,35 @@ authentication, persistence, observability, recovery, and cross-boundary trouble
 
 The confirmed lead decision compares two viable architectures:
 
-| Option                 | Advantages                                             | Costs                                                |
-| ---------------------- | ------------------------------------------------------ | ---------------------------------------------------- |
-| Event Source Mapping   | Automatic offset commits and simpler operational model | Authentication limitations                           |
-| Lambda-managed polling | Authentication flexibility and greater control         | Explicit offset management and replay considerations |
+| Option                      | Advantages                                             | Costs                                                |
+| --------------------------- | ------------------------------------------------------ | ---------------------------------------------------- |
+| Event Source Mapping        | Automatic offset commits and simpler operational model | Authentication limitations                           |
+| Application-Managed Polling | Authentication flexibility and greater control         | Explicit offset management and replay considerations |
 
 This is the appropriate center of the case study because it demonstrates constraint-led
 reasoning. The final implementation choice, its ownership boundary, and its observed
-consequences still require confirmation before prose is written.
+consequences still require confirmation before the case study receives publication
+approval. The current draft exposes those gaps rather than filling them with inference.
 
 Current limitation: no repository can establish the professional ownership, chronology,
 failure incidents, scale, or outcomes. Those require owner confirmation and careful
 confidentiality review.
 
-### 2. Chronicle — retain conditionally as flagship umbrella
+### 2. Chronicle — retain as flagship umbrella
 
 Chronicle should be the umbrella containing two related but non-identical bodies of work:
 
-- **Snapshot Engine:** a Python 3.11 local engine with a CLI, content-addressed blobs, manifests,
-  timelines, diffs, metadata search, tests, Ruff configuration, and CI.
-- **Engineering Orchestrator:** tmux-oriented shell workflows, archived dispatch scripts,
-  run logs, reports, task handoffs, and a small read-only `orchestrator status` CLI.
+- **Snapshot Engine:** an implemented, idempotent local-workspace initializer that creates
+  the `.chronicle` configuration, blobs, and manifests boundaries. Snapshot creation,
+  list/show, diff, search, timeline, and garbage collection remain specifications or
+  placeholders.
+- **Engineering Orchestrator:** a working local prototype built from fixed tmux worker
+  roles, shell dispatch and capture scripts, run logs, reports, task handoffs, and a small
+  read-only `orchestrator status` CLI.
 
-The current README and package metadata define **Chronicle** as the snapshot engine, so
-the umbrella naming will require a deliberate documentation change later. The case study
-must label each capability as implemented, prototype, or architectural exploration. It
-must not imply LangGraph, AutoGen, enterprise deployment, or a production autonomous
-agent service.
+The case study labels every capability as implemented, prototype, or architectural
+exploration. It does not imply LangGraph, AutoGen, enterprise deployment, or a production
+autonomous agent service.
 
 This remains a flagship candidate because the honest evolution—from coordination
 problem, to scripts and checkpoints, to snapshot tooling, to a broader workflow
@@ -160,44 +162,45 @@ design, and modern frontend engineering deeply through experimentation.
 
 ## Evidence matrix
 
-Legend: **Yes** means publishable at the stated generality. **Sanitized** means the claim
+Legend: **Yes** means publishable at the stated generality. **Generalized** means the claim
 can be used only without proprietary details. **Review** means it is not yet approved.
 
-| Claim                                                                          | Evidence source                                             | Project / employer                  | Safe for public use?                   | Needs clarification?                        | Potential portfolio location               |
-| ------------------------------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------- | -------------------------------------- | ------------------------------------------- | ------------------------------------------ |
-| Professional Java/Spring Boot backend experience                               | Owner-supplied professional history                         | GDIT                                | Sanitized                              | Scope and ownership                         | Experience; Backend capability             |
-| Professional REST API and OpenAPI experience                                   | Owner brief                                                 | GDIT                                | Sanitized                              | Representative decisions                    | Experience; Integration case study         |
-| Professional PostgreSQL experience                                             | Owner brief                                                 | GDIT                                | Sanitized                              | Schema/transaction responsibilities         | Backend capability                         |
-| Built applications that deployed onto Kubernetes                               | Owner clarification                                         | GDIT                                | Sanitized                              | Deployment/configuration specifics          | Platform capability                        |
-| GitLab CI/CD experience                                                        | Owner brief                                                 | GDIT                                | Sanitized                              | Pipeline ownership and verified outcome     | Platform capability                        |
-| Work in a classified environment                                               | Owner brief                                                 | GDIT                                | Only at this generality                | Approved wording                            | About/experience                           |
-| Professional Python and Java experience                                        | Owner brief                                                 | TIAA                                | Sanitized                              | Role boundaries and dates                   | Experience                                 |
-| Professional AWS Lambda/SQS/S3/Glue/Athena experience                          | Owner brief                                                 | TIAA                                | Sanitized                              | Which systems and level of ownership        | Cloud capability                           |
-| Professional Kafka experience                                                  | Owner brief                                                 | TIAA and recent integration work    | Sanitized                              | Scale, delivery semantics, operational role | Flagship 1; Distributed Systems capability |
-| Docker and OpenShift experience                                                | Owner brief                                                 | TIAA                                | Sanitized                              | Development vs production ownership         | Platform capability                        |
-| ELK and Prometheus/Grafana experience                                          | Owner brief                                                 | TIAA                                | Sanitized                              | What Sean instrumented or operated          | Operational capability                     |
-| Recent Terraform/HCP Terraform experience                                      | Owner brief                                                 | Recent enterprise integration       | Sanitized                              | Modules, workflow, ownership, outcome       | Flagship 1; Cloud capability               |
-| GitHub Actions delivery automation                                             | Owner brief                                                 | Recent enterprise integration       | Sanitized                              | Workflow stages and ownership               | Flagship 1                                 |
-| Secrets Manager and Vault integration experience                               | Owner brief                                                 | Recent enterprise integration       | Sanitized                              | Authentication pattern safe to describe     | Flagship 1                                 |
-| Distributed networking/DNS troubleshooting                                     | Owner brief                                                 | Recent enterprise integration       | Sanitized                              | Concrete sanitized incident and lesson      | Flagship 1                                 |
-| Idempotent persistence and offset/commit tradeoff knowledge                    | Owner brief as proposed topic                               | Recent enterprise integration       | Review                                 | What was actually implemented               | Flagship 1                                 |
-| Evaluated Event Source Mapping against Lambda-managed polling                  | Owner confirmation                                          | Enterprise event-driven integration | Sanitized                              | Final choice, ownership, and consequences   | Flagship 1 lead decision                   |
-| Event Source Mapping offered automatic commits with authentication limits      | Owner confirmation                                          | Enterprise event-driven integration | Sanitized                              | Exact safe authentication constraint        | Flagship 1 architecture                    |
-| Lambda-managed polling offered authentication control with offset/replay costs | Owner confirmation                                          | Enterprise event-driven integration | Sanitized                              | Implemented offset and replay behavior      | Flagship 1 architecture                    |
-| Improved availability by approximately 30%                                     | Old portfolio only                                          | TIAA                                | No                                     | Owner directed removal unless proven        | Exclude                                    |
-| Kafka pipelines processing millions of events/day                              | Old portfolio only                                          | TIAA                                | No                                     | Owner directed removal unless proven        | Exclude                                    |
-| Reduced deployment time by approximately 40%                                   | Old portfolio only                                          | GDIT                                | Review                                 | Measurement and personal contribution       | Do not publish yet                         |
-| Built a local content-addressed snapshot engine                                | README, spec, source, tests                                 | Chronicle                           | Yes                                    | Which milestones are complete               | Flagship 2                                 |
-| Built multi-agent dispatch/checkpoint tooling                                  | Shell scripts, logs, reports, orchestration package         | Chronicle repository                | Yes at general level                   | Exact workflow and agent responsibilities   | Flagship 2                                 |
-| Built a production autonomous engineering platform                             | No supporting evidence found                                | Chronicle                           | No                                     | Claim should be rejected                    | Nowhere                                    |
-| Implemented DPR-aware Canvas rendering                                         | Experiment source                                           | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3; Creative capability            |
-| Implemented explicit animation lifecycle cleanup                               | `AnimationExperiment`, `ExperimentHost`, experiment modules | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3                                 |
-| Implemented browser-native WebGL and Web Audio experiments                     | Source modules                                              | Resonance Foundry                   | Yes                                    | Browser support notes                       | Flagship 3                                 |
-| Implemented a modal plate approximation and grain simulation                   | Plate physics source and tests                              | Harmonics Lab                       | Yes with “approximation” qualification | None                                        | Flagship 3                                 |
-| Maintains automated math/physics utility tests                                 | 29 passing Vitest tests                                     | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3                                 |
-| Created RAG ingestion/retrieval scaffold with citations                        | README and repository structure                             | EduRAG                              | Yes as prototype/scaffold              | Confirm real-provider paths exercised       | Secondary work                             |
-| Built cross-framework encrypted-session verification                           | README and source paths described                           | JobFit Engine                       | Yes after source review                | Confirm end-to-end test/deployment          | Secondary work                             |
-| Built truth-aware recommendation tooling with explicit data caveats            | README, schemas, tests, knowledge artifacts                 | Diablo IV helper                    | Yes                                    | Current feature status                      | Secondary work                             |
+| Claim                                                                               | Evidence source                                             | Project / employer                  | Safe for public use?                   | Needs clarification?                        | Potential portfolio location               |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------- | -------------------------------------- | ------------------------------------------- | ------------------------------------------ |
+| Professional Java/Spring Boot backend experience                                    | Owner-supplied professional history                         | GDIT                                | Generalized                            | Scope and ownership                         | Experience; Backend capability             |
+| Professional REST API and OpenAPI experience                                        | Owner brief                                                 | GDIT                                | Generalized                            | Representative decisions                    | Experience; Integration case study         |
+| Professional PostgreSQL experience                                                  | Owner brief                                                 | GDIT                                | Generalized                            | Schema/transaction responsibilities         | Backend capability                         |
+| Built applications that deployed onto Kubernetes                                    | Owner clarification                                         | GDIT                                | Generalized                            | Deployment/configuration specifics          | Platform capability                        |
+| GitLab CI/CD experience                                                             | Owner brief                                                 | GDIT                                | Generalized                            | Pipeline ownership and verified outcome     | Platform capability                        |
+| Work in a classified environment                                                    | Owner brief                                                 | GDIT                                | Only at this generality                | Approved wording                            | About/experience                           |
+| Professional Python and Java experience                                             | Owner brief                                                 | TIAA                                | Generalized                            | Role boundaries and dates                   | Experience                                 |
+| Professional AWS Lambda/SQS/S3/Glue/Athena experience                               | Owner brief                                                 | TIAA                                | Generalized                            | Which systems and level of ownership        | Cloud capability                           |
+| Professional Kafka experience                                                       | Owner brief                                                 | TIAA and recent integration work    | Generalized                            | Scale, delivery semantics, operational role | Flagship 1; Distributed Systems capability |
+| Docker and OpenShift experience                                                     | Owner brief                                                 | TIAA                                | Generalized                            | Development vs production ownership         | Platform capability                        |
+| ELK and Prometheus/Grafana experience                                               | Owner brief                                                 | TIAA                                | Generalized                            | What Sean instrumented or operated          | Operational capability                     |
+| Recent Terraform/HCP Terraform experience                                           | Owner brief                                                 | Recent enterprise integration       | Generalized                            | Modules, workflow, ownership, outcome       | Flagship 1; Cloud capability               |
+| GitHub Actions delivery automation                                                  | Owner brief                                                 | Recent enterprise integration       | Generalized                            | Workflow stages and ownership               | Flagship 1                                 |
+| Secrets Manager and Vault integration experience                                    | Owner brief                                                 | Recent enterprise integration       | Generalized                            | Authentication pattern safe to describe     | Flagship 1                                 |
+| Distributed networking/DNS troubleshooting                                          | Owner brief                                                 | Recent enterprise integration       | Generalized                            | Concrete generalized incident and lesson    | Flagship 1                                 |
+| Idempotent persistence and offset/commit tradeoff knowledge                         | Owner brief as proposed topic                               | Recent enterprise integration       | Review                                 | What was actually implemented               | Flagship 1                                 |
+| Evaluated Event Source Mapping against Application-Managed Polling                  | Owner confirmation                                          | Enterprise event-driven integration | Generalized                            | Final choice, ownership, and consequences   | Flagship 1 lead decision                   |
+| Event Source Mapping offered automatic commits with authentication limits           | Owner confirmation                                          | Enterprise event-driven integration | Generalized                            | Exact safe authentication constraint        | Flagship 1 architecture                    |
+| Application-Managed Polling offered authentication control with offset/replay costs | Owner confirmation                                          | Enterprise event-driven integration | Generalized                            | Implemented offset and replay behavior      | Flagship 1 architecture                    |
+| Improved availability by approximately 30%                                          | Old portfolio only                                          | TIAA                                | No                                     | Owner directed removal unless proven        | Exclude                                    |
+| Kafka pipelines processing millions of events/day                                   | Old portfolio only                                          | TIAA                                | No                                     | Owner directed removal unless proven        | Exclude                                    |
+| Reduced deployment time by approximately 40%                                        | Old portfolio only                                          | GDIT                                | Review                                 | Measurement and personal contribution       | Do not publish yet                         |
+| Implemented idempotent local workspace initialization                               | Source and tests                                            | Chronicle                           | Yes                                    | None                                        | Flagship 2                                 |
+| Designed a local content-addressed snapshot engine                                  | README and specification                                    | Chronicle                           | Architectural Exploration              | Snapshot behavior is not implemented        | Flagship 2                                 |
+| Built local multi-worker dispatch and pane-capture tooling                          | Shell scripts, logs, reports, orchestration package         | Chronicle repository                | Yes at general level                   | Exact workflow and agent responsibilities   | Flagship 2                                 |
+| Built a production autonomous engineering platform                                  | No supporting evidence found                                | Chronicle                           | No                                     | Claim should be rejected                    | Nowhere                                    |
+| Implemented DPR-aware Canvas rendering                                              | Experiment source                                           | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3; Creative capability            |
+| Implemented explicit animation lifecycle cleanup                                    | `AnimationExperiment`, `ExperimentHost`, experiment modules | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3                                 |
+| Implemented browser-native WebGL and Web Audio experiments                          | Source modules                                              | Resonance Foundry                   | Yes                                    | Browser support notes                       | Flagship 3                                 |
+| Implemented a modal plate approximation and grain simulation                        | Plate physics source and tests                              | Harmonics Lab                       | Yes with “approximation” qualification | None                                        | Flagship 3                                 |
+| Maintains automated math/physics utility tests                                      | 29 passing Vitest tests                                     | Resonance Foundry                   | Yes                                    | None                                        | Flagship 3                                 |
+| Created RAG ingestion/retrieval scaffold with citations                             | README and repository structure                             | EduRAG                              | Yes as prototype/scaffold              | Confirm real-provider paths exercised       | Secondary work                             |
+| Built cross-framework encrypted-session verification                                | README and source paths described                           | JobFit Engine                       | Yes after source review                | Confirm end-to-end test/deployment          | Secondary work                             |
+| Built truth-aware recommendation tooling with explicit data caveats                 | README, schemas, tests, knowledge artifacts                 | Diablo IV helper                    | Yes                                    | Current feature status                      | Secondary work                             |
 
 ## Evidence-backed capability groups
 

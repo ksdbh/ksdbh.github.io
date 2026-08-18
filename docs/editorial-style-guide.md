@@ -204,7 +204,7 @@ selected option look inevitable after the fact.
 Useful pattern:
 
 > Event Source Mapping simplified offset commits, but its authentication boundary did
-> not fit the integration. Lambda-managed polling provided the required authentication
+> not fit the integration. Application-Managed Polling provided the required authentication
 > control, while making offset ownership and replay behavior application concerns.
 
 The point is not that one service is universally better. The point is why one set of
@@ -397,7 +397,7 @@ color, sound, or JavaScript whenever practical.
 
 ## Confidentiality
 
-Professional work must be sanitized. Never reveal:
+Professional work must be generalized and reviewed for confidentiality. Never reveal:
 
 - Internal or classified architecture.
 - Company secrets.

@@ -14,19 +14,19 @@ export default function WorkPage() {
     <>
       <PageIntro eyebrow="Selected work" title="Engineering decisions before technology lists">
         <p>
-          These case-study routes are established now; final narratives remain blocked on factual
-          and confidentiality review.
+          Three systems examined through their constraints, architecture, operating behavior, and
+          the decisions that shaped them.
         </p>
       </PageIntro>
       <section className="content-stack" aria-labelledby="flagship-projects">
         <h2 id="flagship-projects">Flagship case studies</h2>
         {caseStudyIndex.map((project) => (
           <article className="surface" key={project.slug}>
-            <p className="eyebrow">{project.status.replace('-', ' ')}</p>
+            <p className="eyebrow">{project.eyebrow}</p>
             <h3>
               <Link href={`/work/${project.slug}/`}>{project.title}</Link>
             </h3>
-            <p className="muted">Maturity: {project.maturity.replaceAll('-', ' ')}</p>
+            <p className="muted">Evidence state: {project.maturityLabel}</p>
           </article>
         ))}
       </section>

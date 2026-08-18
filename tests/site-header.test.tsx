@@ -12,7 +12,7 @@ describe('SiteHeader', () => {
     const navigation = screen.getByRole('navigation', { name: 'Primary navigation' });
     expect(navigation).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Work' }).getAttribute('href')).toMatch(/^\/work\/?$/);
-    expect(screen.getByRole('link', { name: 'Lab' }).getAttribute('href')).toMatch(/^\/lab\/?$/);
+    expect(screen.queryByRole('link', { name: 'Lab' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'About' }).getAttribute('href')).toMatch(
       /^\/about\/?$/,
     );

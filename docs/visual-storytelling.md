@@ -68,7 +68,7 @@ On mobile, replace connecting lines with an explicit ordered evidence list.
 
 ### Architecture flow
 
-Concept: a sanitized architecture diagram shows a generic producer, enterprise Kafka
+Concept: a generalized architecture diagram shows a generic producer, enterprise Kafka
 cluster, compute boundary, cloud secrets manager, relational downstream system, and
 observability plane. As the reader advances through the narrative, a synthetic event
 moves through the exact boundary being discussed.
@@ -81,7 +81,7 @@ Information communicated:
 - Persistence and commit boundary.
 - Telemetry emitted across the flow.
 
-The lead comparison should contrast Event Source Mapping with Lambda-managed polling.
+The lead comparison should contrast Event Source Mapping with Application-Managed Polling.
 The visual should make the trade visible: automation and simpler commits on one path;
 authentication flexibility, explicit offset ownership, and replay responsibility on the
 other. Neither path should be visually framed as universally correct.

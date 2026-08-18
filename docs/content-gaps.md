@@ -11,9 +11,9 @@ may be discussed after family considerations; currently **Full Stack Engineer
 (contract)**; 4+ years of professional experience, reaching five years in April 2027;
 seeking long-term backend/platform/cloud opportunities; no “Available” homepage label;
 existing public email confirmed; target positioning is **Backend • Platform • Cloud
-Engineer**.
+Engineer**; `public/Sean_Hayes_Resume.pdf` is the newest authoritative résumé file.
 
-1. **P0:** Which résumé file is the newest authoritative version, and which employment dates and titles in it should control the portfolio?
+1. **P0:** Which employment dates and titles in the authoritative résumé should control the portfolio chronology?
 2. **P1:** Are there industries, company stages, clearance requirements, or role types Sean wants to prioritize or avoid mentioning?
 3. **P2:** Which name format should appear on résumé and metadata: Sean Hayes, Sean M. Hayes, or another form?
 
@@ -45,20 +45,20 @@ unsourced scale.
 Resolved public case-study label: **Enterprise Event-Driven Integration**. Employer and
 internal-system naming will not anchor the story.
 
-1. **P0:** What date range may accompany the sanitized engagement, if any?
+1. **P0:** What date range may accompany the generalized engagement, if any?
 2. **P0:** What was Sean's formal role and what parts of the integration were his direct responsibility?
 3. **P0:** Which facts belong to completed production work versus design, prototype, migration, or troubleshooting?
 4. **P0:** Which technologies and architecture relationships are approved for public mention?
 5. **P1:** Was HCP Terraform used for remote state, runs, policy, variable management, or another responsibility, and what did Sean implement?
 6. **P1:** How did GitHub Actions interact with Terraform and deployment environments, stated without internal workflow or account details?
 7. **P1:** Which authentication responsibilities belonged to AWS Secrets Manager versus HashiCorp Vault?
-8. **P1:** What sanitized networking or DNS failure best demonstrates Sean's method of isolating a distributed integration problem?
+8. **P1:** What generalized networking or DNS failure best demonstrates Sean's method of isolating a distributed integration problem?
 9. **P1:** What relational database was downstream, if naming it is safe, and what write/transaction behavior did the integration require?
 
 ## Enterprise Event-Driven Integration case study
 
 Resolved lead tradeoff: Event Source Mapping offered automatic commits and a simpler
-model but could not satisfy the authentication need; Lambda-managed polling offered
+model but could not satisfy the authentication need; Application-Managed Polling offered
 authentication flexibility and control at the cost of explicit offset management and
 replay considerations.
 
@@ -77,7 +77,7 @@ replay considerations.
 13. **P1:** Which timeout, retry, backoff, or concurrency settings mattered most, and how were they selected?
 14. **P1:** What telemetry connected an event from consumption through transformation and database persistence?
 15. **P1:** Which alarms or dashboards were actionable, and which signals initially produced noise?
-16. **P1:** Describe one sanitized incident where application, network, identity, and downstream symptoms pointed in different directions. What evidence narrowed the fault domain?
+16. **P1:** Describe one generalized incident where application, network, identity, and downstream symptoms pointed in different directions. What evidence narrowed the fault domain?
 17. **P0:** Which option was implemented, what part of that decision did Sean own, and what consequence became most important in operation?
 18. **P2:** If rebuilding the platform today, which decision would Sean preserve and which would he revisit?
 
@@ -86,19 +86,19 @@ replay considerations.
 Resolved naming direction: **Chronicle** is the umbrella; **Snapshot Engine** and
 **Engineering Orchestrator** are related subsystems, not identical products.
 
-1. **P0:** Which orchestrated workflows actually ran end to end with multiple Codex agents, and which exist only as scripts or design concepts?
-2. **P0:** What did the central orchestrator automate beyond displaying status and invoking shell workflows?
-3. **P0:** How were specialized agent roles defined, selected, and handed work?
-4. **P0:** Which tmux behavior was implemented: session creation, pane assignment, command dispatch, monitoring, recovery, or only some of these?
-5. **P0:** What role did Git play in actual coordination—shared working tree, checkpoint commits, rollback, task ownership, or artifact history?
-6. **P0:** Which snapshot-engine milestones are complete: snapshot, list/show, diff, search, timeline, TUI, and garbage collection?
-7. **P1:** What coordination failure or developer-experience problem motivated the orchestration experiment?
-8. **P1:** How did the workflow avoid two agents editing the same file or making incompatible decisions?
-9. **P1:** What happened when an agent stalled, failed a check, or produced an incomplete handoff?
-10. **P1:** Which logs or artifacts demonstrate a completed orchestration run without exposing private prompt or repository data?
-11. **P1:** Why did content-addressed snapshots add value beyond Git commits for this workflow?
-12. **P1:** What security boundary was intended for commands, credentials, repository access, and untrusted output?
-13. **P2:** What would be required to move from local prototype to a dependable multi-user engineering platform?
+Resolved implementation boundary: the Snapshot Engine currently implements idempotent
+workspace initialization only. Snapshot, list/show, diff, search, timeline, TUI, and
+garbage-collection behavior remain specifications or placeholders. The Engineering
+Orchestrator is a working local shell-and-tmux prototype with fixed worker roles,
+command dispatch, pane capture, run logs, reports, and read-only status. It uses a shared
+worktree but does not yet provide structured task ownership, collision avoidance,
+recovery, process isolation, or a production control plane.
+
+1. **P1:** Which concrete coordination failure or developer-experience problem most directly motivated the orchestration experiment?
+2. **P1:** What happened when a worker stalled, failed a check, or produced an incomplete handoff?
+3. **P1:** Which run artifact can be shown publicly without exposing private prompts or repository data?
+4. **P1:** What security boundary should govern commands, credentials, repository access, and untrusted output?
+5. **P2:** What would be required to move from local prototype to a dependable multi-user engineering platform?
 
 ## Resonance Foundry / Harmonics Lab
 
@@ -161,11 +161,12 @@ family-member details; use no forced mountain/software metaphor.
 
 ## Highest-risk missing facts
 
-The following must be resolved before flagship prose is written:
+The following must be resolved before the flagship drafts receive final publication
+approval. Current case-study drafts render unresolved professional claims as explicit
+evidence boundaries:
 
-1. Authoritative résumé and employment chronology beyond the confirmed current role and experience duration.
+1. Employment chronology beyond the confirmed current role and experience duration.
 2. Ownership boundaries for the professional integration work.
 3. Whether any professional metrics in the old portfolio are defensible.
 4. The exact implemented Kafka delivery, idempotency, and failure-recovery behavior.
-5. The confidentiality boundary for the sanitized architecture.
-6. The line between implemented Chronicle orchestration and exploration.
+5. The confidentiality boundary for the generalized architecture.

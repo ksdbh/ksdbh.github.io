@@ -4,23 +4,26 @@ import { FoundationNotice } from '@/components/ui/FoundationNotice';
 
 export const metadata: Metadata = {
   title: 'Lab',
-  description: 'Interactive engineering experiments by Sean Hayes.',
+  description: 'The runtime boundary between Resonance Foundry and Sean Hayes’s portfolio.',
   alternates: { canonical: '/lab/' },
+  robots: { index: false, follow: false },
 };
 
 export default function LabPage() {
   return (
     <>
-      <PageIntro eyebrow="Laboratory" title="Experiments belong here, not everywhere">
+      <PageIntro eyebrow="Laboratory boundary" title="The engineering laboratory remains separate">
         <p>
-          Resonance Foundry will be migrated behind this route after the portfolio’s content and
-          interaction boundaries are complete.
+          Resonance Foundry is maintained as a separate browser Engineering Laboratory. This
+          portfolio documents the decisions and operating behavior without embedding its rendering
+          loops into the portfolio runtime.
         </p>
       </PageIntro>
-      <FoundationNotice title="Migration boundary">
+      <FoundationNotice title="Runtime boundary">
         <p>
-          Animation engines remain separate from portfolio presentation. Future adapters will load
-          browser-native experiments only where they provide explanatory value.
+          Keeping the laboratory separate prevents Canvas, WebGL, Web Audio, microphone, and frame
+          lifecycle concerns from becoming global portfolio behavior. Its implemented architecture
+          is documented in the Resonance Foundry case study.
         </p>
       </FoundationNotice>
     </>
